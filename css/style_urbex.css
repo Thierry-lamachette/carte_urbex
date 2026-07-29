@@ -1,0 +1,88 @@
+/* Script CSS permettant l'ajout de styles aux éléments de la page de l'application d'Urbex (couleur, police, position...) */
+
+/* I - Définition des marges de la page */
+body, html {
+    margin: 0%; /* Pas de marge gauche/droite de la page */
+    padding: 0%; /* Pas de marge haute/base de la page */
+    height: 100%; /* Le body prend toute la hauteur de la page */
+    width: 100%; /* Le body prend toute la largeur de la page */
+}
+
+
+/* II - Définition de la taille de la carte */
+#carte {
+    height: 100%; /* La carte prend toute la place du body en hauteur */
+    width: 100%; /* La carte prend toute la place du body en largeur */
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* III - Positionnement du bouton de contrôle des fonds de plan */
+.leaflet-control-layers {
+    top: 85px; /* Positionnement verticale */
+    right: 0px; /* Positionnement horizontale */
+    position: relative; /* Positionnement absolu pour les placer exactement où l'on veux */
+    white-space: nowrap; /* Permet d'afficher les textes du bouton contrôle des couches sur une seul ligne */
+    padding: 0vh;
+}
+
+
+
+/* IV - Style de l'échelle dynamique */
+.leaflet-control-scale {
+    background: rgba(255, 255, 255, 0.8); /* Blanc avec transparence */
+    border: 0.1vh solid #ddd;
+    border-radius: 0.3vh;
+    padding: 0.4vh;
+    text-align: center;
+    color: #555;
+    box-shadow: 0.2vh 0.2vh 0.5vh rgba(0, 0, 0, 0.8); /* Ombre subtile */
+    font-family: 'Calibri';
+    font-size: 1.3vh; /* Taille de la police */
+}
+
+
+/* V - Positionnement de l'icône de la flèche du nord */
+.fleche_nord {
+    position: absolute;
+    bottom: 6.5vh; /* Distance du bas */
+    right: 2vh; /* Distance du bord droit */
+    width: 4vh; /* Largeur proportionnelle à la hauteur de l'écran */
+    height: 4vh; /* Hauteur égale pour garder la forme ronde */
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+    padding: 0.5vh; /* Espacement interne */
+    border-radius: 50%; /* Donne une forme ronde */
+    text-align: center;
+    box-shadow: 0 0.4vh 1vh rgba(0, 0, 0, 0.2); /* Ombre */
+    cursor: pointer;
+    z-index: 1001; /* Superposition sur le contenu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+}
+/* Icône interne */
+.image_fleche {
+    width: 2.5vh; /* Largeur proportionnelle */
+    height: auto; /* Maintien des proportions */
+}
+
+
+
+/* VI - Positionnement du bouton recentrage de la carte */
+.bouton_recentrage {
+    position: fixed; /* Positionnement par défaut */
+    bottom: 93%; /* Position verticale par défaut */
+    left: 97%; /* Position horizontale par défaut */
+    z-index: 1000;
+    background-color: white;
+    border: 0.15vh solid #ccc;
+    border-radius: 0.4vh;
+    padding: 1vh 1vh;
+    cursor: pointer;
+    box-shadow: 0 0.2vh 0.6vh rgba(0, 0, 0, 0.3);
+}
+.bouton_recentrage:hover {
+    background-color: #f0f0f0;
+}
+.image_recentrage {
+    width: 2vh; /* Ajuster la taille du logo */
+    height: 2vh;
+}

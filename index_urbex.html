@@ -1,0 +1,60 @@
+<!-- Script HTML permettant permettant l'import d'un squelette à la page de notre application d'Urbex -->
+
+
+<!-- Définition du type de document (HTML) -->
+<!DOCTYPE html>
+
+
+<!-- Ouverture de la balise HTML -->
+<html>
+
+
+<!-- I - Paramétrage du document -->
+<!-- Ouverture de la balise HEAD qui permet le paramétrage du document -->
+<head>
+    <!-- Définition du type d'encodage -->
+    <meta charset="UTF-8">
+    <!-- Permet de rendre adaptable l'affichage de l'application sur tout type d'écran (Mobile/PC) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Définition du titre de la page (onglet) -->
+    <title>Carte URBEX</title>
+    <!-- Ajout du fichier de style CSS de Leaflet (fichier externe) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Ajout du fichier de style CSS de la page (fichier interne) -->
+    <link rel="stylesheet" href="css/style_urbex.css">
+    <!-- Fermeture de la balise HEAD -->
+</head>
+
+
+<!-- Ouverture de la balise BODY qui contient tout le contenu visible de la page -->
+<body>
+
+
+    <!-- II - Paramétrage de la carte et de ces élements de compositions -->
+    <!-- Affichage de la carte -->
+    <div id="carte"></div>
+    <!-- Flèche du nord avec une image SVG -->
+    <div id="orientation" class="fleche_nord">
+        <img src="img/fleche_nord.svg" alt="Flèche du nord" class="image_fleche">
+    </div>
+    <!-- Affichage bouton de recentrage de la carte de la carte -->
+    <button id="recentrage_coordonnes" class="bouton_recentrage">
+        <img src="img/logo_recentrage.png" alt="Logo" class="image_recentrage">
+    </button>
+
+
+    <!-- III - Liens avec les fichiers JavaScript -->
+    <!-- Ajout du fichier de fonctionnalités JS de Leaflet (fichier externe) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Lien avec les couches GeoJSON (JavaScript) -->
+    <script src="data/localisation_urbex.js"></script>
+    <!-- Ajout du fichier de fonctionnalités JS de la page (fichier interne) -->
+    <script src="js/script_urbex.js"></script>
+
+
+<!-- Fermeture de la balise BODY -->
+</body>
+
+
+<!-- Fermeture de la balise HTML -->
+</html>
