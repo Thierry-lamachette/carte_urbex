@@ -86,3 +86,11 @@ body, html {
     width: 2vh; /* Ajuster la taille du logo */
     height: 2vh;
 }
+/* Media Query pour les téléphones (écrans < 768px) */
+@media (max-width: 768px) {
+    .bouton_recentrage {
+        bottom: 85%; /* Décale vers le bas pour éviter les chevauchements */
+        left: 90%; /* Décale vers la gauche pour éviter les bords */
+        padding: 1.5vh; /* Augmente légèrement le padding pour une meilleure touche */
+    }
+}
