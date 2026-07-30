@@ -87,7 +87,7 @@ body, html {
     height: 2vh;
 }
 /* Media Query pour les téléphones (écrans < 768px) */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .bouton_recentrage {
         bottom: 85%; /* Décale vers le bas pour éviter les chevauchements */
         left: 90%; /* Décale vers la gauche pour éviter les bords */
